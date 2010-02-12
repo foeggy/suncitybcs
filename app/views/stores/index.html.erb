@@ -1,0 +1,46 @@
+<% content_for :title do %>
+	Stores Snapshot Homie
+<% end %>
+
+<table>
+  <tr>
+    <th>Phone</th>
+    <th>Street</th>
+    <th>Shoppingcenter</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip</th>
+    <th>Lat</th>
+    <th>Lon</th>
+    <th>Name</th>
+  </tr>
+
+<% @stores.each do |store| %>
+  <tr>
+    <td><%=h store.phone %></td>
+    <td><%=h store.street %></td>
+    <td><%=h store.shoppingcenter %></td>
+    <td><%=h store.city %></td>
+    <td><%=h store.state %></td>
+    <td><%=h store.zip %></td>
+    <td><%=h store.lat %></td>
+    <td><%=h store.lon %></td>
+    <td><%=h store.name %></td>
+    <td><%= link_to 'Show', store %></td>
+    <td><%= link_to 'Edit', edit_store_path(store) %></td>
+    <td><%= link_to 'Destroy', store, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New store', new_store_path %>
+
+
+<h1>Check out all deez snapshoots</h1>
+<%= render :partial => "snapshot1", :collection => @stores, :as => :store, :locals => { :liststyle => "storelist" } %>
+
+<% content_for :javascript do %>
+  <%= render(:file => 'stores/javascript/_index_doc_load.js') %>
+<% end %>
