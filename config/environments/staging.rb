@@ -1,5 +1,3 @@
-GNU nano 2.0.9              File: staging.rb                                  
-
 # Settings specified here will take precedence over those in config/environment$
 
 # In the development environment your application's code is reloaded on
