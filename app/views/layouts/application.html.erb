@@ -1,8 +1,7 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html>
-	<head>
-		<title><%= h(yield(:title) || "Untitled") %></title>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head><title><%= h(yield(:title) || "Untitled") %></title>
 		<%= stylesheet_link_tag('style', :media => 'all') %>
 		<%= javascript_include_tag 'jquery', 'application' %>
 		    <script type="text/javascript">
@@ -11,12 +10,37 @@
 		<%= yield(:head) %>
 		
 		<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-	</head>
-	<body>
-		<div id="container" style="margin-top: 25px;">
-			<h1><%=h yield(:title) %></h1>
-			
-			<%= yield %>
-		</div>
-	</body>
+</head>
+<body>
+	<div id="container">
+		<div id="container2">
+			<div id="banner"><h1><span><%=h yield(:title) %></span></h1></div>
+			<div id="content">
+            	<div id="mainContent">
+					<%= yield %>
+            	</div>
+            </div>
+    		<div id="navigation">
+        		<ul id="nav">
+            		<li>
+                		<a href="/Default.aspx">Home</a>
+            		</li>
+            		<li><a href="javascript:void(0);">About Us</a></li>
+            		<li><a href="javascript:void(0);">Shop</a>
+	                    <ul>
+	                        <li><a href="javascript:void(0);">Item 1</a></li>
+	                        <li><a href="javascript:void(0);">Item 2</a></li>
+	                        <li><a href="javascript:void(0);">Item 3</a></li>
+	                    </ul>
+	                </li>
+	                <li><a href="javascript:void(0);">Contact Us</a></li>
+	                <li><a href="javascript:void(0);">FAQs</a></li>
+	            </ul>
+    		</div>
+    		<div id="footer">
+        		&copy;2010 Sun City Tanning. All Right Reserved.
+    		</div>
+    	</div>
+    </div>
+</body>
 </html>

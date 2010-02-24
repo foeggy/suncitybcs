@@ -1,2 +1,1 @@
-<h1>Check out all deez snapshoots</h1>
-<%= render :partial => "snapshot1", :collection => @stores, :as => :store %>
+<%= render :partial => "stores/snapshot1", :collection => @stores, :as => :store, :locals => { :liststyle => "storelist" } %>

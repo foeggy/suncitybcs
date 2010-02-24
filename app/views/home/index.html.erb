@@ -1,2 +1,24 @@
-<h1>Welcome to Sun City Tanning </h1>
-<%= link_to "Current Promotions", promos_path %>
+<% content_for :title do %>
+  Welcome to Sun City Tanning
+<% end %>
+
+<div id="welcomeBanner">
+   <div id="welcomeBannerContent">
+		<h2>3 convenient locations in the Bryan/College Station area</h2>
+		<%= render :partial => "stores/snapshot1", :collection => @stores, :as => :store, :locals => { :liststyle => "storelist" } %>
+		<!--<img src="http://maps.google.com/maps/api/staticmap?&markers=size:mid|color:red|913-D+Harvey+Rd,College+Station,+TX,+77840|2205+Longmire,College+Station,TX,77840|1885+Briarcrest,Bryan,TX,77802&size=300x300&sensor=false"></img>-->
+   </div>
+</div>
+<h1>Title 1</h1>
+<h2>Title 2</h2>
+<a href="javascript:void(0);">Test Link</a>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pretium pharetra sem, 
+ac sagittis nulla commodo in. Vestibulum iaculis, augue vel auctor blandit, dolor nibh 
+vehicula ipsum, placerat vulputate urna est nec justo. Donec varius elit velit, id 
+faucibus sem. Praesent ut consequat tellus. Nunc elit magna, iaculis ac laoreet vitae, 
+aliquam quis velit. Donec sed elit turpis, nec laoreet neque. Aliquam lacinia venenatis 
+dictum. Suspendisse nec massa purus. Pellentesque at tellus vitae est ornare blandit 
+vitae eu sem. Proin sem justo, ultrices quis facilisis sit amet, elementum at neque. 
+Curabitur at dui vitae elit ullamcorper tempor a nec erat. Cras erat arcu, bibendum et 
+luctus nec, viverra id lorem. Suspendisse iaculis scelerisque lectus, non auctor ipsum 
+aliquam eu.<br /><br />

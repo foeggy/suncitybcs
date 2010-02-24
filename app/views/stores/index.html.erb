@@ -36,11 +36,3 @@
 <br />
 
 <%= link_to 'New store', new_store_path %>
-
-
-<h1>Check out all deez snapshoots</h1>
-<%= render :partial => "snapshot1", :collection => @stores, :as => :store, :locals => { :liststyle => "storelist" } %>
-
-<% content_for :javascript do %>
-  <%= render(:file => 'stores/javascript/_index_doc_load.js') %>
-<% end %>

@@ -1,8 +1,8 @@
-
 	<ul id="<%= liststyle %>">
+		<!--<li><div id="map_canvas_<%= snapshot1_counter %>" style="width: 200px; height: 150px"></div></li>-->
+		<img src="http://maps.google.com/maps/api/staticmap?center=<%= store.street %>,+<%= store.city %>,+<%= store.state %>+<%=store.zip %>&markers=<%= store.street %>,+<%= store.city %>,+<%= store.state %>+<%=store.zip %>&zoom=14&size=200x150&sensor=false"></img>
 		<li><%= store.shoppingcenter %></li>
 		<li><%= store.street %></li>
 		<li><%= store.city %>, <%= store.state %>  <%= store.zip %></li>
 		<li><%= store.phone %></li>
-		<li><div id="map_canvas_<%= snapshot1_counter %>" style="width: 100px; height: 100px"></div></li>
 	</ul>
