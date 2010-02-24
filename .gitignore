@@ -3,3 +3,6 @@ tmp/*
 config/app.yml
 config/database.yml
 server
+.buildpath
+.project
+*~
